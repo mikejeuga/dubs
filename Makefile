@@ -34,6 +34,7 @@ init:
 
 c: commit
 commit:
+	@git add .
 	@git commit -am "$m"
 	@git pull --rebase
 	git push
