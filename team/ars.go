@@ -8,7 +8,7 @@ type Team struct {
 	Members Squad
 }
 
-func (t Team) Find(ctx context.Context, engineerID string) (Engineer, error) {
+func (t Team) Find(ctx context.Context, engineerID int) (Engineer, error) {
 	//TODO implement me
 	panic("implement me")
 }
@@ -18,5 +18,5 @@ func NewARS(members Squad) *Team {
 }
 
 type EngineerFinder interface {
-	Find(ctx context.Context, engineerID string) (Engineer, error)
+	Find(ctx context.Context, engineerID int) (Engineer, error)
 }
